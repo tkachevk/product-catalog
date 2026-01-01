@@ -16,22 +16,22 @@
                     new AvailabilityDTO
                     {
                         Shop = new ShopDTO() { Name = "Кулакова" },
-                        Count = product.Stock.Kulakova
+                        Count = Math.Max(0, (int)product.Stock.Kulakova)
                     },
                     new AvailabilityDTO
                     {
                         Shop = new ShopDTO() { Name = "Тухачевского" },
-                        Count = product.Stock.Tukhachevsky
+                        Count = Math.Max(0, (int)product.Stock.Tukhachevsky)
                     },
                     new AvailabilityDTO
                     {
                         Shop = new ShopDTO() { Name = "Шоколад" },
-                        Count = product.Stock.Chocolate
+                        Count = Math.Max(0, (int)product.Stock.Chocolate)
                     },
                     new AvailabilityDTO
                     {
                         Shop = new ShopDTO() { Name = "Галлерея" },
-                        Count = product.Stock.Gallery
+                        Count = Math.Max(0, (int)product.Stock.Gallery)
                     }
                 }
             };
