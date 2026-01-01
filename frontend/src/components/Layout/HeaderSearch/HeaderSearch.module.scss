@@ -1,0 +1,94 @@
+.headerSecond {
+  padding-top: 24px;
+  color: #fff;
+
+  .mobile-block {
+    display: none;
+  }
+
+  .headerSecondWrapper {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mainIcon:hover {
+  cursor: pointer;
+}
+
+.flexBasket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basketIcon {
+  margin-left: 35px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  a {
+    margin: 0px 19.5px;
+  }
+}
+
+.locationIcon {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .headerSecond {
+    color: #fff;
+    margin-bottom: 40px;
+
+    .mobile-block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .mobile-menu-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-image: url('../../../image/mobile-menu-icon.png');
+      }
+    }
+
+    .headerSecondWrapper {
+      width: 100%;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .desktop-logo {
+        display: none;
+      }
+    }
+
+    a .mainIcon {
+      display: none;
+    }
+
+    .locationIcon {
+      display: none;
+    }
+  }
+
+  .iconsContainer {
+    display: none;
+  }
+}

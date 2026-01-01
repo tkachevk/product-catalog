@@ -1,0 +1,28 @@
+.no-products {
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 300;
+  color: #8d8d8d;
+}
+
+.footer {
+  margin-top: 66px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .order-price {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 32px;
+    color: #990424;
+  }
+}
+
+@media (max-width: 581px) {
+  .footer {
+    .order-price {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.flex-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 90px 0 90px 0;
+  flex-direction: row;
+}
+
+.flex-block-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.content-block {
+  text-align: center;
+}
+
+.image-card {
+  width: 455px;
+  height: 550px;
+  border-radius: 66px;
+  object-fit: cover;
+}
+
+.product-name {
+  text-align: center;
+  font: 600 40px 'Roboto';
+}
+
+.product-price {
+  text-align: center;
+  font: 400 32px/1.2 'Roboto';
+  color: #990424;
+  margin: 30px 0 40px 0;
+}
+
+.button-favorites {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 0px 5px 29px -7px rgba(0, 0, 0, 0.25);
+  background: #fdfdfd;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-left: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .heart-icon {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.button-favorites.active {
+  border: 2px solid #990424;
+}
+
+.product-description {
+  text-align: left;
+  white-space: break-spaces;
+  font: 400 16px 'Roboto';
+  text-align: center;
+}
+
+.location {
+  margin-top: 30px;
+}
+
+.location-availability {
+  font: 300 16px/1.5 'Roboto';
+  color: #000000;
+}
+
+.product-availability {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.availability-shop-name {
+  font: 300 24px 'Roboto';
+}
+
+.availability-shop-count {
+  font: 300 24px 'Roboto';
+  color: #990424;
+}
+
+@media (max-width: 1200px) {
+  .flex-block {
+    flex-direction: column;
+  }
+
+  .image-card {
+    width: 240px;
+    height: 280px;
+  }
+
+  .product-name {
+    margin-top: 28px;
+    font: 600 24px 'Roboto';
+  }
+
+  .product-price {
+    margin: 14px 0 21px 0;
+  }
+
+  .button-favorites {
+    width: 39px;
+    height: 39px;
+
+    .heart-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .location-availability {
+    font: 300 12px 'Roboto';
+  }
+
+  .availability-shop-name {
+    font: 300 14px 'Roboto';
+  }
+
+  .availability-shop-count {
+    font: 300 14px 'Roboto';
+  }
+
+  .product-availability {
+    padding: 0 10px 0 10px;
+  }
+}

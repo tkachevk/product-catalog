@@ -15,11 +15,6 @@ bld/
 
 # Visual Studio cache/options directory
 .vs/
-.vscode/
-
-# Rider cache/options directory
-.idea/
-*.sln.iml
 
 # User-specific files
 *.rsuser
@@ -78,10 +73,8 @@ ScaffoldingReadMe.txt
 *.tlb
 *.tli
 *.tlh
-*.tmp
 *.tmp_proj
 *_wpftmp.csproj
-*.log
 *.tlog
 *.vspscc
 *.vssscc
@@ -116,7 +109,6 @@ _ReSharper*/
 *.DotSettings.user
 
 # JetBrains Rider
-.idea/
 *.sln.iml
 
 # CodeRush personal settings
