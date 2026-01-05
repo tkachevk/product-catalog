@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Container from '../../Container/Container';
-import CustomSearch from '../../UI/CustomSearch';
+import Container from '../../ui/Container/Container';
+import SearchInput from '../../ui/SearchInput/SearchInput';
 import classes from './Header.module.scss';
 import config from '../../../config';
-import { Logo } from '../../Logo/Logo';
+import { Logo } from '../../ui/Logo/Logo';
 import { FaInstagram, FaTelegram, FaVk, FaPhone } from 'react-icons/fa';
 
 const iconMap = {
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className={classes.mobileHeaderSearch}>
-            <CustomSearch />
+            <SearchInput />
           </div>
         </Container>
       </header>
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
         <Container>
           <div className={classes.headerContent}>
             <Logo />
-            <CustomSearch />
+            <SearchInput />
             <div className={classes.iconsContainer}>
               {config.socialMedia && config.socialMedia.map((social, index) => {
                 const Icon = iconMap[social.name as keyof typeof iconMap];

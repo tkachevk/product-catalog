@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Layout } from './components/Layout/Layout';
+import { Layout } from './components/layout/Layout/Layout';
 import './App.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ProductCard } from './pages/ProductCard/ProductCard';
-import MainPage from './components/MainPage/MainPage';
-import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
 
 const App: React.FC = () => {
 
@@ -12,9 +11,8 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Layout>
         <Switch>
-          <Route path="/" exact component={MainPage} />
+          <Route path="/" exact component={CatalogPage} />
           <Route path="/:card" exact component={ProductCard} />
-          <Route path="/categories" exact component={CategoriesPage} />
         </Switch>
       </Layout>
     </BrowserRouter>

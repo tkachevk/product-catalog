@@ -16,6 +16,10 @@ interface AppConfig {
     href: string;
     height: number;
   }> | null;
+  categories: Array<{
+    name: string;
+    link: string;
+  }> | null;
   storage: {
     keys: {
       shoppingCart: string;
@@ -45,6 +49,18 @@ const config: AppConfig = {
       }
     } catch (error) {
       console.warn('Failed to parse REACT_APP_SOCIAL_MEDIA:', error);
+    }
+    return null;
+  })(),
+  categories: (() => {
+    try {
+      const envValue = process.env.REACT_APP_CATEGORIES;
+      if (envValue) {
+        const parsed = JSON.parse(envValue);
+        return Array.isArray(parsed) ? parsed : null;
+      }
+    } catch (error) {
+      console.warn('Failed to parse REACT_APP_CATEGORIES:', error);
     }
     return null;
   })(),
