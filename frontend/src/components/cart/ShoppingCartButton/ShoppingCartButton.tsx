@@ -9,10 +9,11 @@ interface IProps {
 
 const ShoppingCartButton: React.FC<IProps> = ({ onClick }) => {
   const [shoppingCart] = useLocalStorage('shoppingCart', []);
+  const Icon = FaShoppingCart as React.FC<{ className?: string; size?: number }>;
 
   return (
     <div className={styles['cart-button']} onClick={onClick}>
-      <FaShoppingCart className={styles['cart-button__icon']} size={50} />
+      <Icon className={styles['cart-button__icon']} size={50} />
       {shoppingCart.length >= 1 && (
         <div className={styles['styled-num']}>
           {shoppingCart.reduce((acc, curr: any) => acc + curr.amount, 0)}

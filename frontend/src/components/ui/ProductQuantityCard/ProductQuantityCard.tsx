@@ -2,6 +2,12 @@ import React from 'react';
 import styles from './ProductQuantityCard.module.scss';
 import { FaPlus, FaMinus, FaTimes } from 'react-icons/fa';
 
+type IconComponent = React.FC<{ size?: number }>;
+
+const MinusIcon = FaMinus as IconComponent;
+const PlusIcon = FaPlus as IconComponent;
+const TimesIcon = FaTimes as IconComponent;
+
 interface IProps {
   quantityItem: any;
   downItemHandler?: (item: any) => void;
@@ -34,7 +40,7 @@ const ProductQuantityCard: React.FC<IProps> = ({
               }}
               className={`${styles['down-btn']} ${styles['change-amount-btn']}`}
             >
-              <FaMinus size={15} />
+              <MinusIcon size={15} />
             </div>
             <div className={styles['value']}>
               <span>{quantityItem.amount}</span>
@@ -45,7 +51,7 @@ const ProductQuantityCard: React.FC<IProps> = ({
               }}
               className={`${styles['up-btn']} ${styles['change-amount-btn']}`}
             >
-              <FaPlus size={15} />
+              <PlusIcon size={15} />
             </div>
           </div>
         )}
@@ -57,7 +63,7 @@ const ProductQuantityCard: React.FC<IProps> = ({
       )}
       <div onClick={() => removeItemHandler(quantityItem)} className={styles['remove-btn-wrapper']}>
         <div className={styles['btn']}>
-          <FaTimes size={20} />
+          <TimesIcon size={20} />
         </div>
       </div>
     </div>

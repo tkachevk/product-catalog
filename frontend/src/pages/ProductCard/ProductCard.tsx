@@ -9,6 +9,10 @@ import { ProductDTO } from '../../types';
 import { ShoppingCartItem } from '../../types';
 import { MdLocationOn } from 'react-icons/md';
 
+type IconComponent = React.FC<{ size?: number }>;
+
+const LocationIcon = MdLocationOn as IconComponent;
+
 const ProductCard: React.FC = () => {
   const [responseData, setResponseData] = useState<ProductDTO | null>(null);
   const [shoppingCart, setShoppingCart] =       useLocalStorage<ShoppingCartItem[]>(
@@ -71,7 +75,7 @@ const ProductCard: React.FC = () => {
           </div>
           <div className={classes['product-description']}>{responseData.description}</div>
           <div className={classes['location']}>
-            <MdLocationOn size={20} />
+            <LocationIcon size={20} />
             <p className={classes['location-availability']}>Наличие в магазинах</p>
           </div>
           <div className={classes['product-availability']}>

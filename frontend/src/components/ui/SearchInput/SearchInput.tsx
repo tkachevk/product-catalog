@@ -9,6 +9,10 @@ import { ProductDTO } from '../../../types';
 import { searchProducts } from '../../../redux/catalog/catalogActions';
 import { FaSearch } from 'react-icons/fa';
 
+type IconComponent = React.FC<{ className?: string; size?: number }>;
+
+const SearchIcon = FaSearch as IconComponent;
+
 const SearchInput: React.FC = () => {
   const [openSearch, setOpenSearch] = React.useState<boolean>(false);
   const [searchText, setSearchText] = React.useState<string>('');
@@ -138,7 +142,7 @@ const SearchInput: React.FC = () => {
           placeholder="Поиск"
         />
         <button onClick={handleSearchSubmit} className={classes['button-search']}>
-          <FaSearch className={classes['icon-search']} size={15} />
+          <SearchIcon className={classes['icon-search']} size={15} />
         </button>
       </div>
       <div className={classes[cn({ search: openSearch === true })]}>
